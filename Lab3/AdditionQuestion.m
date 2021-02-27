@@ -2,35 +2,24 @@
 //  AdditionQuestion.m
 //  Lab3
 //
-//  Created by Yuki Tsukada on 2021/02/25.
+//  Created by Yuki Tsukada on 2021/02/27.
 //
 
 #import "AdditionQuestion.h"
 
-@implementation AdditionQuestion {
-    
-}
+@implementation AdditionQuestion
 
 // -: instance method
 - (instancetype) init {
     if (self = [super init]) {
-        NSInteger randomLeft = arc4random_uniform(91) + 10;  // (0+10)~(90+10)
-        NSInteger randomRight = arc4random_uniform(91) + 10;
-        _question = [NSString stringWithFormat:@"%d + %d = ?", (int)randomLeft, (int)randomRight];
-        _answer = randomLeft + randomRight;
-        _startTime = [NSDate date];
+        [self generateQuestion];
     }
     return self;
 }
 
-- (NSTimeInterval) answerTime {
-    return round([self.endTime timeIntervalSinceDate:self.startTime]);
-}
-
-// overriding getter
-- (NSInteger) answer {
-    _endTime = [NSDate date];
-    return _answer;
+- (void) generateQuestion {
+    super.question = [NSString stringWithFormat:@"%d + %d = ?", (int)self.leftValue, (int)self.rightValue];
+    super.answer = self.leftValue + self.rightValue;
 }
 
 @end

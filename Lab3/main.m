@@ -7,21 +7,25 @@
 
 #import <Foundation/Foundation.h>
 #import "AdditionQuestion.h"
+#import "SubtractionQuestion.h"
+#import "MultiplicationQuestion.h"
+#import "DivisionQuestion.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
+#import "QuestionFactory.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         BOOL gameOn = YES;
         ScoreKeeper *newScoreKeeper = [[ScoreKeeper alloc] init];
+        InputHandler *newInputHandler = [[InputHandler alloc] init];
         QuestionManager *newQuestionManager = [[QuestionManager alloc] init];
+        QuestionFactory *newQuestionFactory = [[QuestionFactory alloc] init];
         NSLog(@"MATHS!\n");
         NSLog(@"Input quit to exit.\n");
         while (gameOn) {
-            AdditionQuestion *newQuestion = [[AdditionQuestion alloc] init];
-            
-            InputHandler *newInputHandler = [[InputHandler alloc] init];
+            Question *newQuestion = newQuestionFactory.generateRandomQuestion;            
             
             NSString *strInput = [newInputHandler getUserInput:([NSString stringWithFormat:@"%@", newQuestion.question])];
             if ([strInput isEqualToString:@"quit"]) { break; }
@@ -33,8 +37,8 @@ int main(int argc, const char * argv[]) {
                 newScoreKeeper.wrongCount += 1;
             }
             [newQuestionManager.questions addObject:newQuestion];
-            NSLog(@"%@\n", newScoreKeeper.showScore);
-            NSLog(@"%@\n", newQuestionManager.timeOutput);
+            NSLog(@"%@", newScoreKeeper.showScore);
+            NSLog(@"%@", newQuestionManager.timeOutput);
         }
     }
     return 0;
