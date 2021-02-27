@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61465D7C25EA2EC500888368 /* QuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61465D7B25EA2EC500888368 /* QuestionManager.m */; };
 		61AF625B25E63DED00E25E6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AF625A25E63DED00E25E6C /* main.m */; };
 		61DCCC5625E76C8E001FABB2 /* AdditionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DCCC5525E76C8E001FABB2 /* AdditionQuestion.m */; };
 		61DCCC5A25E77773001FABB2 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DCCC5925E77773001FABB2 /* InputHandler.m */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		61465D7A25EA2EC500888368 /* QuestionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionManager.h; sourceTree = "<group>"; };
+		61465D7B25EA2EC500888368 /* QuestionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionManager.m; sourceTree = "<group>"; };
 		61AF625725E63DED00E25E6C /* Lab3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab3; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AF625A25E63DED00E25E6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		61DCCC5425E76C8E001FABB2 /* AdditionQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdditionQuestion.h; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 				61AF625A25E63DED00E25E6C /* main.m */,
 				61DCCC5425E76C8E001FABB2 /* AdditionQuestion.h */,
 				61DCCC5525E76C8E001FABB2 /* AdditionQuestion.m */,
+				61465D7A25EA2EC500888368 /* QuestionManager.h */,
+				61465D7B25EA2EC500888368 /* QuestionManager.m */,
 				61DCCC5825E77773001FABB2 /* InputHandler.h */,
 				61DCCC5925E77773001FABB2 /* InputHandler.m */,
 				61DCCC5C25E77C80001FABB2 /* ScoreKeeper.h */,
@@ -133,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61465D7C25EA2EC500888368 /* QuestionManager.m in Sources */,
 				61DCCC5E25E77C80001FABB2 /* ScoreKeeper.m in Sources */,
 				61AF625B25E63DED00E25E6C /* main.m in Sources */,
 				61DCCC5A25E77773001FABB2 /* InputHandler.m in Sources */,

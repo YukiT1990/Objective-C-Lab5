@@ -13,10 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 // public properties
 @property NSString* question;
-@property NSInteger answer;
+@property (nonatomic) NSInteger answer;
+@property NSDate* startTime;
+@property NSDate* endTime;
 
 // public methods
 - (instancetype) init;
+- (NSTimeInterval) answerTime;
 
 
 @end
