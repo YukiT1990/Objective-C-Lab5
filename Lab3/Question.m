@@ -25,7 +25,7 @@
     
 }
 
-- (NSTimeInterval) answerTime {
+- (NSTimeInterval) timeToAnswer {
     return round([self.endTime timeIntervalSinceDate:self.startTime]);
 }
 

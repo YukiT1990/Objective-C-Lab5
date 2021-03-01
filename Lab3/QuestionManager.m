@@ -20,7 +20,7 @@
     NSTimeInterval totalTime = 0.0;
     NSTimeInterval averageTime = 0.0;
     for (AdditionQuestion *eachQuestion in self.questions) {
-        totalTime += eachQuestion.answerTime;
+        totalTime += eachQuestion.timeToAnswer;
     }
     averageTime = totalTime / self.questions.count;
     return [NSString stringWithFormat: @"total time: %0.fs, average time: %0.fs", totalTime, averageTime];

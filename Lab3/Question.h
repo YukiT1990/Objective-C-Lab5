@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // public methods
 - (instancetype) init;
-- (NSTimeInterval) answerTime;
+- (NSTimeInterval) timeToAnswer;
 - (void) generateQuestion;
 
 @end
